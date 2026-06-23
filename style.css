@@ -1,0 +1,406 @@
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('fonts/TTLakes-Regular.eot');
+    src: url('fonts/TTLakes-Regular.eot?#iefix') format('embedded-opentype'),
+         url('fonts/TTLakes-Regular.woff') format('woff'),
+         url('fonts/TTLakes-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('fonts/TTLakes-Medium.eot');
+    src: url('fonts/TTLakes-Medium.eot?#iefix') format('embedded-opentype'),
+         url('fonts/TTLakes-Medium.woff') format('woff'),
+         url('fonts/TTLakes-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('fonts/TTLakes-Bold.eot');
+    src: url('fonts/TTLakes-Bold.eot?#iefix') format('embedded-opentype'),
+         url('fonts/TTLakes-Bold.woff') format('woff'),
+         url('fonts/TTLakes-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* ... шрифты ... */
+
+* {
+    font-family: "TT Lakes";
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'TT Lakes', sans-serif;
+    background: #F8F8F8;
+    color: #1B1C21;
+    min-width: 320px;
+}
+
+/* ========== HEADER ========== */
+.header {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #D9FFF5;
+    height: 88px;
+    display: flex;
+    align-items: center;
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    gap: 24px;
+    width: 100%;
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+.header__logoburger {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.header__repcheck {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.header__icon {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+}
+
+.header__logo {
+    width: 96px;
+    height: 50px;
+    flex-shrink: 0;
+}
+
+.header__right{
+    display: none;
+}
+.verticalLine {
+    display: inline-block;
+    width: 2px;
+    height: 32px;
+    flex-shrink: 0;
+    background-color: #EAEAEA;
+    border-radius: 1px;
+}
+
+.verticalLine--hidden {
+    display: none; 
+}
+
+/* ========== SERVICES ========== */
+.main {
+    padding: 24px 16px 0;
+}
+
+.services__container {
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+/* ========== Заголовок ========== */
+.services__heading {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.services__buttonsConteiner {
+    display: none;
+}
+
+.services__titleSection {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+    left: -16px;
+}
+
+.services__buttonSection {
+    display: none;
+}
+
+
+.services__highlight {
+    width: 5px;
+    height: 30px;
+    border-radius: 3px;
+    flex-shrink: 0;
+    background-color: #41F6D7;
+}
+
+.services__title {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: -0.6px;
+    color: #1B1C21;
+}
+
+/* ========== Навигация (FLEX + скролл) ========== */
+.services__nav {
+    display: flex;              /* ← ОСНОВНОЕ! */
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 16px;
+    padding: 4px 0 8px;
+    scroll-snap-type: x mandatory;
+}
+
+.services__nav::-webkit-scrollbar {
+    display: none;
+}
+
+.services__btn {
+    font-family: 'TT Lakes', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: #7E7E82;
+    background: transparent;
+    padding: 8px 20px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    flex-shrink: 0;             /* ← кнопки НЕ сжимаются */
+    scroll-snap-align: start;
+}
+
+.services__btn--active { 
+    border: 2px solid transparent;             
+    color: #1B1C21;
+    background-color: #FFFFFF;
+    border-color: #41F6D7;
+    box-shadow: 0 0 0 1px #41F6D7;
+}
+
+/* ========== Контент ========== */
+.services__content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.services__text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.services__paragraph {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    color: #1B1C21;
+}
+
+.services__paragraph--hidden {
+    display: none;
+}
+
+.services__read-more {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    margin-top: 4px;
+}
+
+.services__read-more-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.services__read-more-text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: #1B1C21;
+}
+
+.services__read-more:hover .services__read-more-text {
+    opacity: 0.7;
+}
+
+.services__image {
+    flex-shrink: 0;
+}
+
+.services__image-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+/* ======================================== */
+/* ========== Планшеты (768px) ============ */
+/* ======================================== */
+@media (min-width: 768px) {
+
+    .services__titleSection {
+        left: -24px;
+        gap: 20px;
+    }
+
+    .verticalLine--hidden {
+        display: inline-block;
+    }
+
+    .header__right {
+        display: flex;
+        gap: 16px;
+        margin-left: auto;
+    }
+
+    .main {
+        padding: 32px 24px 0;
+    }
+
+    .services__heading {
+        margin-bottom: 20px;
+    }
+
+    .services__nav {
+        gap: 12px;
+        margin-bottom: 20px;
+        overflow-x: visible;    /* ← убираем скролл */
+    }
+
+    .services__btn {
+        padding: 10px 20px;
+    }
+
+    .services__content {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 32px;
+    }
+
+    .services__text {
+        flex: 1;
+        gap: 20px;
+    }
+
+    .services__paragraph {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .services__paragraph--hidden {
+        display: block;         /* ← показываем второй абзац */
+    }
+
+    .services__subparagraph--hidden {
+        display: none;
+    }
+
+    .services__image {
+        flex: 0 0 360px;
+    }
+
+    .services__image-img {
+        border-radius: 12px;
+    }
+
+}
+
+@media (min-width: 1120px) {
+
+    .services__buttonsConteiner {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+    }
+
+    .services__heading {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 18px;
+    }
+
+    .services__titleSection {
+        position: relative;
+        left: -32px;
+        gap: 30px;
+    }
+
+    .services__buttonSection {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .header {
+        display: none;
+    }
+
+    .main {
+        padding: 24px 32px 0;
+    }
+
+    .services__container {
+        max-width: none; /* Снимаем ограничение ширины */
+        margin: 0; /* Убираем центрирование */
+    }
+
+    .services__heading {
+        margin-bottom: 24px;
+    }
+
+    .services__nav {
+        gap: 16px;
+        margin-bottom: 24px;
+		flex-wrap: wrap; 
+    }
+
+
+    .services__btn {
+        padding: 12px 24px;
+    }
+
+    .services__content {
+        gap: 48px;
+    }
+
+    .services__text {
+        gap: 24px;
+    }
+
+    .services__paragraph {
+        font-size: 15px;
+        line-height: 22px;
+    }
+
+    .services__subparagraph--hidden {
+        display: inline;
+    }
+
+    .services__image {
+        flex: 0 0 420px;
+    }
+}
